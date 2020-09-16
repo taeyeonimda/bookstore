@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>login 로그인</title>
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"><!-- logo -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+body {background: linear-gradient(to right, #169ac9, white);}
+.login-form {width: 380px; margin: 50px auto;}
+.login-form form {margin-bottom: 200px; background: white; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);padding: 30px;}
+.login-form h2 {margin: 0 0 15px;}
+.form-control, .btn {min-height: 40px; border-radius: 2px;}
+.btn {font-size: 15px; font-weight: bold;}
+</style>
+</head>
+<body>
+<div class = 'container'><!-- 화면 여백 -->
+   <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 사용자 버튼 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+     <a class="navbar-brand" href="../main.html">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book-open fa-2x"></i><strong>&nbsp;&nbsp;오늘의 책</strong></a><div></div><!-- logo -->
+    <ul class='breadcrumb' style="text-align:right; height:60px; font-size:17px;">
+	  <li><a href='../user/02.html'>login</a></li>
+	  <li><a href='../user/01.html'>회원가입</a></li>
+    </ul>
+ 	<!-- END END END END END END END END 사용자 버튼 END END END END END END END END -->  
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ login $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<div class="login-form">
+    <form name="loginForm" class="form-horizontal" action="../main.html" method ='post'>
+        <h2 class="text-center"><b>오늘의 책</b></h2><br>       
+        <div class="form-group">
+           <input type="text" class="form-control" 
+           id='userId' placeholder="ID" name="userId" maxlength ='10'autofocus>
+         <input   type="password" class="form-control"  maxlength='13'
+         id="userPwd" placeholder="암호" name="userPwd" >
+         <div class="checkbox"><label class="pull-left checkbox-inline"><input type="checkbox" name="idSaveCheck" id='idSaveCheck' value='y'>ID 저장</label></div>
+            <br>
+            <button type="submit" class="btn btn-info btn-block" name='login' onclick="send_go()">login</button>
+            <button type="button" class="btn btn-info btn-block" name='login' onclick="location.href='../admin/adminMain.html'">관리자 login</button>
+            <a href='./01.html' type="submit" class="btn btn-primary btn-block">회원가입</a><hr>
+        </div>      
+      </form>    
+</div>
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ login 끝 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+</div><!-- 화면 여백 끝 --><br><br><br><br><br>
+</body>
+</html>                                      

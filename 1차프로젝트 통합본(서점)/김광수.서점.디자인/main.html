@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>MAIN</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/header.css"><!-- header css file import -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"><!-- logo -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+*{margin:0;padding:0;} /* banner.css*/
+  ul,li{list-style:none;}
+  #slide{height:300px;position:relative;overflow:hidden;}
+  #slide ul{width:400%;height:100%;transition:1s;}
+  #slide ul:after{content:"";display:block;clear:both;}
+  #slide li{float:left;width:25%;height:100%;}
+  #slide li:nth-child(1){background:#faa;}
+  #slide li:nth-child(2){background:#ffa;}
+  #slide li:nth-child(3){background:#faF;}
+  #slide li:nth-child(4){background:#aaf;}
+  #slide input{display:none;}
+  #slide label{display:inline-block;vertical-align:middle;width:10px;height:10px;border:2px solid #666;background:#fff;transition:0.3s;border-radius:50%;cursor:pointer;}
+  #slide .pos{text-align:center;position:absolute;bottom:10px;left:0;width:100%;text-align:center;}
+  #pos1:checked~ul{margin-left:0%;}
+  #pos2:checked~ul{margin-left:-100%;}
+  #pos3:checked~ul{margin-left:-200%;}
+  #pos4:checked~ul{margin-left:-300%;}
+  #pos1:checked~.pos>label:nth-child(1){background:#666;}
+  #pos2:checked~.pos>label:nth-child(2){background:#666;}
+  #pos3:checked~.pos>label:nth-child(3){background:#666;}
+</style>
+<body>
+
+<div class = 'container'><!-- 화면 여백 -->
+   <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 사용자 버튼 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+     <a class="navbar-brand" href="./main.html">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book-open fa-2x"></i><strong>&nbsp;&nbsp;오늘의 책</strong></a><div></div><!-- logo -->
+    <ul class='breadcrumb' style="text-align:right; height:60px; font-size:17px;">
+	  <li><a href='./user/02.html'>login</a></li>
+	  <li><a href='./user/01.html'>회원가입</a></li>	  	
+      <li><a href='./mypage/01.html'>마이페이지</a></li>
+      <li><a href='./cart/01.html'>장바구니</a></li>
+    </ul>
+ 	<!-- END END END END END END END END 사용자 버튼 END END END END END END END END -->  
+ 	       
+    <div id='fix'><!-- 반응형 웹 차단 -->
+    <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 로고 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+    <div style="position: relative; left:80px; top:40px;">
+    <a href='./main.html' class="navbar-brand">&nbsp;
+    <i class="fas fa-book-open fa-4x"></i></a></div>
+    <!-- END END END END END END END END 로 END END END END END END END END -->
+    
+    <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 검색창 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --><br><br><br><br>
+    <form action='./book/02.html' style="text-align:center;" >
+    <span class='search_box'>
+      <input type='text' class='input_text' name='keyword' placeholder="검색할 책을 입력하세요"/></span>
+      <button type='submit' class='search_bt'>
+   <span class='glyphicon glyphicon-search'>
+   </span></button></form>
+   <!-- END END END END END END END END 검색 END END END END END END END END -->  
+   </div><!-- 반응형 웹 차단  --><br><br><br>
+        
+   <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 카테고리 분류 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+   <ul class='nav nav-tabs'>
+      <li class='dropdown'>
+         <a class='dropdown-toggle' data-toggle='dropdown'
+         href='#'> 국내도서 <span class='caret'></span></a>
+         <ul class='dropdown-menu'>
+            <li><a href="#">문학 소설</a></li>
+            <li><a href="#">경제 경영</a></li>
+            <li><a href="#">인문 사회</a></li>
+            <li><a href="#">정치 외교</a></li>
+            <li><a href="#">논문 에세이</a></li>
+         </ul>
+      </li>
+      
+      <li class='dropdown'>
+         <a class='dropdown-toggle' data-toggle='dropdown'
+         href='#'> 외국도서 <span class='caret'></span></a>
+         <ul class='dropdown-menu'>
+            <li><a href="#">영어 원서</a></li>
+            <li><a href="#">폴란드 원서</a></li>
+            <li><a href="#">스페인 원서</a></li>
+            <li><a href="#">독일 원서</a></li>
+            <li><a href="#">프랑스 원서</a></li>
+         </ul>
+      </li>
+      
+      <li class='dropdown'>
+         <a class='dropdown-toggle' data-toggle='dropdown'
+         href='#'> eBook <span class='caret'></span></a>
+         <ul class='dropdown-menu'>
+            <li><a href="#">소설</a></li>
+            <li><a href="#">만화</a></li>
+            <li><a href="#">오디오북</a></li>
+            <li><a href="#">무료 eBook</a></li>
+            <li><a href="#">전자도서관</a></li>
+         </ul>
+      </li>
+   </ul><br><br><br><!-- END END END END END END END END 카테고 END END END END END END END END -->  
+   
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 배너 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<div id="slide">
+  <input type="radio" name="pos" id="pos1" checked>
+  <input type="radio" name="pos" id="pos2">
+  <input type="radio" name="pos" id="pos3">
+  <input type="radio" name="pos" id="pos4">
+  <ul><li>책소개 1</li><li>책소개 2</li><li>책소개 3</li><li>책소개 4</li></ul>
+  <p class="pos">
+    <label for="pos1"></label>
+    <label for="pos2"></label>
+    <label for="pos3"></label>
+    <label for="pos4"></label>
+  </p></div><br><br>
+<!-- END END END END END END END END 배 END END END END END END END END -->  
+   
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 책소개  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+   <div class="col-xs-3" ><!-- 책 1 -->
+       <div class="thumbnail">
+         <a href="./book/01.html" class="thumbnail" style="height: 200px;">이미지 </a>
+   		<div class="caption">
+		      <h4>Java의 정석</h4>
+		      <p>책소개글</p>
+   		</div>
+      </div>
+   </div>
+   
+<!-- END END END END END END END END 책소개 END END END END END END END END -->
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 책소개  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+   <div class="col-xs-3" ><!-- 책 2 -->
+       <div class="thumbnail">
+         <a href="./book/01.html" class="thumbnail" style="height: 200px;">이미지 </a>
+   		<div class="caption">
+		      <h4>JSP와 웹</h4>
+		      <p>책소개글</p>
+   		</div>
+      </div>
+   </div>   
+<!-- END END END END END END END END 책소개 END END END END END END END END -->
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 책소개  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+   <div class="col-xs-3" ><!-- 책 3 -->
+       <div class="thumbnail">
+         <a href="./book/01.html" class="thumbnail" style="height: 200px;">이미지 </a>
+   		<div class="caption">
+		      <h4>HTML과 CSS</h4>
+		      <p>책소개글</p>
+   		</div>
+      </div>
+   </div>   
+<!-- END END END END END END END END 책소개 END END END END END END END END -->
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 책소개  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+   <div class="col-xs-3" ><!-- 책 4 -->
+       <div class="thumbnail">
+         <a href="./book/01.html" class="thumbnail" style="height: 200px;">이미지 </a>
+   		<div class="caption">
+		      <h4>토비의 스프링</h4>
+		      <p>책소개글</p>
+   		</div>
+      </div>
+   </div>   
+<!-- END END END END END END END END 책소개 END END END END END END END END --><br><br><br>
+  
+</div><!-- 화면 여백 끝 --><br><br><br><br><br><br><br>
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 페이징  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<div class='container' style="text-align:center">
+  <ul class="pagination">
+  	<li class='active'><a href='#'>1</a></li>
+    <li><a href='#'>2</a></li>    
+    <li class='disabled'><a href='#'>3</a></li>
+    <li><a href='#'>4</a></li>
+    <li><a href='#'>5</a></li>
+  </ul>
+</div><!-- END END END END END END END END 페이징 END END END END END END END END -->
+<footer><!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ footer $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+   <div class='container'><br><br>
+      <dl><dd><table class="table-footer table-boardered"><tbody><tr>
+      <td>상호명: 오늘의 책 &nbsp;</td><td>대표명: 김광수</td></tr> <tr>
+      <td colspan="2"> 사업자등록번호: 000-00-0000</td></tr><tr>
+      <td colspan="2"> (000-00) 서울시 서초구 서초동</td></tr><tr>
+      <td>TEL: +48) 604-000&nbsp;&nbsp;</td><td>Email: kwangsoo@naver.com</td></tr><tr>
+      <td colspan="2">Copyright kwangsoo. All Rights Reserved</td></tr></tbody></table></dd></dl>
+   </div>
+</footer>
+</body>
+</html>

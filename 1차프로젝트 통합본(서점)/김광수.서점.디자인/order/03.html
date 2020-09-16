@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>주문상세 내역 order Lsit detail</title>
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"><!-- 로고 -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script> 
+<style>
+body {background: linear-gradient(to right, #169ac9, white);}
+.login-form {width: 500px; margin: 50px auto;}
+.login-form form {margin-bottom: 20px; background: white; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);padding: 30px;}
+.login-form h2 {margin: 0 0 15px;}
+.form-control, .btn {min-height: 40px; border-radius: 2px;}
+.btn {font-size: 15px; font-weight: bold;}
+</style>
+</head>
+<body>
+<div class='container'>
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 사용자 버튼 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+    <a class="navbar-brand" href="../main.html">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book-open fa-2x"></i><strong>&nbsp;&nbsp;오늘의 책</strong></a><div></div><!-- logo -->
+    <ul class='breadcrumb' style="text-align:right; height:60px; font-size:17px;">
+       <li><a href='#'>logout</a></li>
+       <li><a href='../mypage/01.html'><strong>마이페이지</strong></a></li>
+       <li><a href='../cart/01.html'>장바구니</a></li>
+     </ul>     
+<!-- END END END END END END END END 사용자 버튼 END END END END END END END END -->
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 현재 버튼 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<div class="col-sm-12 " style="text-align:center;">
+   <div class="btn-group">
+      <button class="btn btn-dafault" onclick = "location.href = './02.html' " style='font-size:18px;'>주문내역</button>
+      <button class="btn btn-dafault" onclick = "location.href = '../mypage/01.html' " >회원정보</button>
+      <button class="btn btn-dafault" onclick = "location.href = '../mypage/02.html' ">수정ㆍ탈퇴</button>
+   </div>
+</div><!-- END END END END END END END END 현재 버튼 END END END END END END END END -->
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 회원가입 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --><br><br>
+<div class="login-form">
+    <form name="joinForm" action="./userUpDelProc.html" method="post"><br>
+        <h2 class="text-center"><b>주문 상세내용</b></h2><br>
+        <p class="hint-text">현재 회원님이 주문하신 상세내용입니다.</p>
+        <div class="form-group "><input class="form-control" value ='1215423' readonly></div>    
+        <div class="form-group"><input class="form-control" value ='Java의 정석' readonly></div>
+        <div class="form-group"><input class="form-control" value ='1권' readonly></div>
+        <div class="form-group"><input class="form-control" value ='총가격: 30,000원' readonly></div>
+        <div class="form-group"><input class="form-control" value ='결제방식: 카드 ' readonly></div>
+        <div class="form-group"><input class="form-control" value ='수령인: 이도' readonly></div>
+        <div class="form-group"><input class="form-control" value ='배송지: 서울 서초구 서초동 서울병원 3층' readonly></div>
+        <div class="form-group"><input class="form-control" value ='연락처: 02-1234-1234' readonly></div>
+        <div class="form-group"><input class="form-control" value ='주문일자: 2020-02-14' readonly></div>
+        <div class="form-group"><input class="form-control" value ='배송(예상)일자: 2020-02-16' readonly></div>
+        <div class="form-group"><input class="form-control" value ='배송상태: 배송중 ' readonly></div>
+    </form>
+</div><br><br><!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 회원가입 끝 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+</div>
+</body>
+</html>                            

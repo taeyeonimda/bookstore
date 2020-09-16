@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Book info</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"><!-- 로고 -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script> 
+<style>
+.book { margin :15px; height: 400px; width: 300px; background: lightblue;}
+</style>
+</head>
+<body>
+<div class='container'>
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 사용자 버튼 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+    <a class="navbar-brand" href="../main.html">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book-open fa-2x"></i><strong>&nbsp;&nbsp;오늘의 책</strong></a><div></div><!-- logo -->
+    <ul class='breadcrumb' style="text-align:right; height:60px; font-size:17px;">
+       <li><a href='#'>logout</a></li>
+       <li><a href='../mypage/01.html'>마이페이지</a></li>
+       <li><a href='../cart/01.html'>장바구니</a></li>
+     </ul>     
+<!-- END END END END END END END END 사용자 버튼 END END END END END END END END -->    
+    <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 검색창 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --><br>
+    <div id='fix'>
+    <div style="text-align:center;">
+    <span class='search_box'>
+      <input type='text' class='input_text' placeholder="검색할 책을 입력하세요"/></span>
+      <button type='submit' class='search_bt'>
+   <span class='glyphicon glyphicon-search'>
+   </span></button></div></div>
+   <br><br><br>
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 책이미지 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --><br>
+<!-- 책 이미지 -->
+<div style="float: left;"> <!-- 책 위치 왼쪽 고정 -->
+<div class="book" align="left">책 이미지</div></div>
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 책정보 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --><br>
+<form id='fix' style='width:1000px; position: relative; left: 150px;'>
+<div>
+<h2><strong>Java의 정석</strong></h2><br><br>
+남궁 저&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;도우출판사&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;2016년 2월 1일<br><br>
+<strong><font size="4px" color="#f7637c">정가&nbsp;&nbsp;30,000원</font></strong><br><br><br>
+판매중<br>
+수량&nbsp;
+
+<input type="number" name="bookQuan" size='3' value="1" min="1" max="5" style="text-align:center;"/> 개
+<br>
+배송비:&nbsp;&nbsp;무료<br><br><br>
+<input type="hidden" name="bookIsbn" value="<%= bookIsbn %>" />
+<button type="submit" style = "width: 100px" formaction="../cart/01.html">카트에 넣기</button>&nbsp;&nbsp;
+<button type="submit" style = "width: 100px" formaction="../order/01.html">바로구매</button><br><br>
+</div>
+</form>
+<!-- book info END --><hr width = 100%><br><br>
+
+<!-------품목정보 시작------->
+<div><h2>품목정보</h2><br>
+<table width="100%">
+        <colgroup><col width="170"><col width="*"></colgroup>
+       <tr><th>출간일</th><td>2016년 02월 01일</td></tr>
+        <tr><th>페이지</th><td>1022쪽 |</td></tr><tr>      
+        <th>ISBN13</th><td>9788960773417</td></tr>
+</table></div>
+<!--품목정보 END --><hr width = 100%><br><br>
+
+<!--  책 소개 -->
+<h3><strong>책소개</strong></h3><br>
+
+최근 7년동안 자바 분야의 베스트 셀러 1위를 지켜온 '자바의 정석'의 최신판. 
+저자가 카페에서 12년간 직접 독자들에게 답변을 해오면서 초보자가 어려워하는 부분을 잘 파악하고 쓴 책. 
+뿐만 아니라 기존의 경력자들을 위해 자바의 최신기능(람다와 스트림)을 자세하면서도 깊이있게 설명하고 있다. 
+저자가 2002년부터 꾸준히 집필해온 책으로 깊이와 세밀함 그리고 저자의 정성과 노력이 돋보이는 책이다. 
+12년간 저자가 카페에서 손수 답변해줬다는 사실은 이 책에 대한 신뢰를 갖게 한다.<br><br>
+
+<!--  책 소개 끝--><hr width = 100%><br><br>
+
+<!-- 목차 -->
+<h3><strong>목차</strong></h3><br>
+
+Chapter 1 자바를 시작하기 전에<br>
+
+Chapter 2 변수(Variable)<br>
+
+Chapter 3 연산자(Operator)<br>
+
+Chapter 4 조건문과 반복문<br>
+
+Chapter 5 배열(Array)<br>
+
+Chapter 6 객체지향 프로그래밍 I<br>
+
+Chapter 7 객체지향 프로그래밍 II<br>
+
+Chapter 8 예외처리(Exception Handling)<br>
+
+Chapter 9 java.lang패키지와 유용한 클래스<br>
+
+Chapter 10 날짜와 시간 & 형식화<br>
+
+Chapter 11 컬렉션 프레임웍<br>
+
+Chapter 12 지네릭스, 열거형, 애너테이션<br>
+
+Chapter 13 쓰레드(Thread)<br>
+
+Chapter 14 람다와 스트림<br>
+
+Chapter 15 입출력(I/O)<br>
+
+Chapter 16 네트워킹(Networking)<br>
+<!-- 목차 끝 --><hr width = 100%><br><br>
+
+</div>  <!-- 화면 여백 끝 -->
+</body>
+</html>

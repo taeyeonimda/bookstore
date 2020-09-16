@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>join 회원가입</title>
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"><!-- logo -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+body {background: linear-gradient(to right, #169ac9, white);}
+.login-form {width: 500px; margin: 50px auto;}
+.login-form form {margin-bottom: 20px; background: white; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); padding: 30px; }
+.login-form h2 {margin: 0 0 15px;}
+.form-control, .btn {min-height: 40px; border-radius: 2px;}
+.btn {font-size: 15px; font-weight: bold;}
+</style>
+</head>
+<body>
+<div class = 'container'><!-- 화면 여백 -->
+   <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 사용자 버튼 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+     <a class="navbar-brand" href="../main.html">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book-open fa-2x"></i><strong>&nbsp;&nbsp;오늘의 책</strong></a><div></div><!-- logo -->
+    <ul class='breadcrumb' style="text-align:right; height:60px; font-size:17px;">
+	  <li><a href='../user/02.html'>login</a></li>
+	  <li><a href='../user/01.html'>회원가입</a></li>
+    </ul>
+ 	<!-- END END END END END END END END 사용자 버튼 END END END END END END END END -->  
+
+   <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 회원가입 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+   <div class="login-form">
+      <form name="joinForm" method="post">
+         <br>
+         <h2 class="text-center">
+            <b>회원가입</b>
+         </h2>
+         <br>
+         <p class="hint-text">회원가입을 위해 아래의 양식을 작성해주세요.</p>
+         <div class="form-group ">
+            <input type="text" class="form-control" name="userName"
+               placeholder="이름" maxlength ='10' autofocus>
+         </div>
+         <div class="form-group">
+            <input type="text" class="form-control" name="userId" id='userId'
+               maxlength='10' placeholder="ID"></div>
+         <div class="form-group">
+            <input type="password" class="form-control" id='userPwd'
+               name="userPwd" placeholder="암호는 영문,특수문자,숫자를 포함해 8자 이상을 적어주세요." maxlength='13'>
+         </div>
+         <div class="form-group">
+            <input type="password" id='chkPwd' name="chkPwd"
+               class="form-control" placeholder="암호확인">
+         </div>
+         <div class="form-group">
+            <input type="date" id="userBirth" name="userBirth"
+               class="form-control" max='9999-12-31' placeholder="생년월일">
+         </div>
+         <div class="form-group">
+            <input type="text" class="form-control"  id="userEmail"
+               name="userEmail" placeholder="E-mail"  style='ime-mode:disabled;'>
+         </div>
+         <div class="form-group">
+            <input type="text" class="form-control" name="tel"
+               placeholder="전화번호">
+         </div>
+         
+         <div class="from-group row">
+            <div class="col-xs-9"><input type="text" class="form-control" id ="sample4_address" name="address1" placeholder="주소"></div>
+            <div class="col-xs-3"><button type="button" class="btn btn-default btn-sm" onclick="sample4_execDaumPostcode()">주소찾기</button></div>
+      </div><br>
+         <div class="form-group">
+            <input type="text" class="form-control" name="address2"
+               placeholder="상세주소를 입력해주세요.">
+         </div>
+
+       <div class="text-center">
+            <a href='../main.html' type="submit" class="btn btn-info" style="width: 50%">회원가입</a><hr>
+       </div>
+      </form>
+      <div class="text-center"> 이미 회원이신가요? <a href="./02.html">login은 저를 클릭해주세요.</a></div>
+   </div>
+   <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 회원가입 끝 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+</div><!-- 화면 여백 끝 --><br><br><br><br><br>
+</body>
+</html>

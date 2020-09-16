@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>order list 주문내역</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"><!-- logo -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<style>
+body {background: linear-gradient(to right, #169ac9, white);}
+.login-form {width: 500px; margin: 50px auto;}
+.login-form form {margin-bottom: 20px; background: white; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);padding: 30px;}
+.login-form h2 {margin: 0 0 15px;}
+.form-control, .btn {min-height: 40px; border-radius: 2px;}
+.btn {font-size: 15px; font-weight: bold;}
+</style>
+</head>
+<body>
+<div class='container'>
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 사용자 버튼 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+    <a class="navbar-brand" href="../main.html">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book-open fa-2x"></i><strong>&nbsp;&nbsp;오늘의 책</strong></a><div></div><!-- logo -->
+    <ul class='breadcrumb' style="text-align:right; height:60px; font-size:17px;">
+       <li><a href='#'>logout</a></li>
+       <li><a href='../mypage/01.html'><strong>마이페이지</strong></a></li>
+       <li><a href='../cart/01.html'>장바구니</a></li>
+     </ul>     
+<!-- END END END END END END END END 사용자 버튼 END END END END END END END END -->
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 현재 버튼 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<div class="col-sm-12 " style="text-align:center;">
+   <div class="btn-group">
+      <button class="btn btn-dafault" onclick = "location.href = './02.html' " style='font-size:18px;'>주문내역</button>
+      <button class="btn btn-dafault" onclick = "location.href = '../mypage/01.html' " >회원정보</button>
+      <button class="btn btn-dafault" onclick = "location.href = '../mypage/02.html' ">수정ㆍ탈퇴</button>
+   </div>
+</div><!-- END END END END END END END END 현재 버튼 END END END END END END END END -->
+
+	<div class="login-form"><br>
+	    <form action="../main.html" method="post"><br>
+	      <h2 class="text-center"><b>주문내역</b></h2>
+	       <table class="table table-boardered">
+	        	<tr><th>주문번호</th><th>주문도서</th><th>수령인</th><th>배송상태</th></tr>
+				<tr>	
+					<td>1254245</td>
+			        <td><a href="./03.html">Java의 정석</a></td>
+			        <td>이도 </td>
+			        <td>배송중</td>
+			    </tr>
+	 	  </table>
+	    </form>
+	</div>
+</div>
+</body>
+</html>

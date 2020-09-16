@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+#logo{
+   position: relative; left: 80px; top: 0px;
+   border-radius: 8px; /*모서리가 둥근 사각형*/
+   border:5px solid #279fd6;
+   margin :10px; height: 100px; width: 200px; background:white;
+   padding:25px; margin-right:-100px; margin-bottom:10px; float:left;}
+   
+/* Disabled Responsive Design Web */   
+#fix {width: 1200px; height: 150px; border-radius: 7px; padding: 0 10px;}
+
+/* Search */   
+.search_box {display: inline-block; width: 400px; height: 40px;   border: 3px solid #279fd6; background: white;}
+.input_text {width: 380px; height: 25px; margin: 5px 0 0 10px; border: 0px; font-size: 15px;}
+.search_bt {width: 45px; height: 40px; border: 0; vertical-align: top; background: #279fd6; color: white; border-radius: 1px;}
+.search_bt:hover {background: #95d3f0;} /* 클릭시 색상 변화 이벤트 */
+/* Search END */
+
+body {min-height: 100%;}
+
+footer{ height: 150px; font-size:12px; color: white; background: #82b8e0;}

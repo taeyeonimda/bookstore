@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>book Add 도서등록</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"><!-- 로고 -->
+<style>
+body {background: linear-gradient(to right, #169ac9, white);}
+.book-form {width: auto; margin: 50px auto;}
+.book-form form {margin-bottom: 20px; background: white; 
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);	padding: 30px;}
+.book-form h2 {margin: 0 0 15px;}
+.form-control, .btn {min-height: 40px; border-radius: 2px;}
+.btn {font-size: 15px; font-weight: bold;}
+th {text-align: center;}
+</style>
+</head>
+<div class='container'><!-- 화면 여백 -->
+   <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 사용자 버튼 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+    <a class="navbar-brand" href="../adminMain.html">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book-open fa-2x"></i><strong>&nbsp;&nbsp;오늘의 책</strong></a><div></div><!-- logo -->
+    <ul class='breadcrumb' style="text-align:right; height:60px; font-size:17px;">
+      <li><a href='../../main.html'>관리자 logout</a></li>
+      <li><a href='./01.html'>관리 페이지</a></li>
+      <p style='font-size:13px'>관리자님, 환영합니다.</p>
+    </ul><!-- END END END END END END END END 사용자 버튼 END END END END END END END END --> 
+
+	<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 현재 버튼 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+   <br> <br>
+   <div class="col-sm-12 " style="text-align: center;">
+      <div class="btn-group">
+         <button class="btn btn-dafault" onclick="location.href = '../user/01.html' ">회원정보</button>
+         <button class="btn btn-dafault" style='font-size: 18px;' onclick="location.href = './01.html' ">도서목록</button>
+      </div>
+   </div><!-- END END END END END END END END 현재 버튼 END END END END END END END END --> 
+
+	<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 주문내역 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+	<br>
+	<br>
+	<div class="book-form">
+			<br>
+			
+			<br>
+			<br>
+			<br>
+				<form class="form-group" method="post" enctype="multipart/form-data">
+					<h2 class="text-center">
+						<b>도서등록</b>
+					</h2>
+					<br>
+						<table class="table table-boardered">
+					<tr>
+						<th>책 제목:</th>
+						<td colspan="3"><input type="text" class="form-control"
+							name="bookTitle" ></td>
+					</tr>
+					<tr>
+						<th>저자:</th>
+						<td colspan="3"><input type="text" class="form-control"
+							name="bookAuthor" ></td>
+					</tr>
+
+					<tr>
+						<th>출판사:</th>
+						<td colspan="3"><input type="text" class="form-control"
+							name="bookPublisher" ></td>
+					</tr>
+					<tr>
+						<th>출간일:</th>
+						<td colspan="3"><input type="date" class="form-control"
+							name="bookPublishDate" ></td>
+					</tr>
+					<tr>
+						<th>책소개:</th>
+						<td colspan="3"><input type="text" class="form-control"
+							name="bookIntr" ></td>
+					</tr>
+					<tr>
+						<th>장르:</th>
+						<td colspan="3"><input type="text" class="form-control"
+							name="bookGenre" ></td>
+					</tr>
+					<tr>
+						<th>가격:</th>
+						<td colspan="3"><input type="number" max="600000" class="form-control"
+							name="bookPrice" ></td>
+					</tr>
+					<tr>
+						<th>도서 이미지:</th>
+						<td colspan="3"><input type="file" class="form-control"
+							name="bookImage"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>
+							<button type="submit" class="btn btn-info" formaction="./02.html">등록</button>
+						</td>
+
+
+						<td>
+							<button type="button" class="btn btn-danger" onclick="location.href='#'">취소</button>
+						</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+</div>
+</html>

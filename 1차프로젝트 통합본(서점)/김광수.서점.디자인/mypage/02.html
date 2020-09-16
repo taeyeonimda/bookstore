@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>userUpDel 회원정보 수정 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"><!-- logo -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<style>
+body {background: linear-gradient(to right, #169ac9, white);}
+.login-form {width: 500px; margin: 50px auto;}
+.login-form form {margin-bottom: 20px; background: white; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);padding: 30px;}
+.login-form h2 {margin: 0 0 15px;}
+.form-control, .btn {min-height: 40px; border-radius: 2px;}
+.btn {font-size: 15px; font-weight: bold;}
+</style>
+</head>
+<body>
+<div class='container'>
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 사용자 버튼 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+    <a class="navbar-brand" href="../main.html">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book-open fa-2x"></i><strong>&nbsp;&nbsp;오늘의 책</strong></a><div></div><!-- logo -->
+    <ul class='breadcrumb' style="text-align:right; height:60px; font-size:17px;">
+       <li><a href='#'>logout</a></li>
+       <li><a href='./01.html'><strong>마이페이지</strong></a></li>
+       <li><a href='../cart/01.html'>장바구니</a></li>
+     </ul>     
+<!-- END END END END END END END END 사용자 버튼 END END END END END END END END -->
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 현재 버튼 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<div class="col-sm-12 " style="text-align:center;">
+   <div class="btn-group">
+      <button class="btn btn-dafault" onclick = "location.href = '../order/02.html' ">주문내역</button>
+      <button class="btn btn-dafault" onclick = "location.href = './01.html' ">회원정보</button>
+      <button class="btn btn-dafault" onclick = "location.href = './02.html' " style='font-size:18px;'>수정ㆍ탈퇴</button>
+   </div>
+</div><!-- END END END END END END END END 현재 버튼 END END END END END END END END -->
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 회원수정 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --><br><br>
+<div class="login-form">
+			
+			<form name='upDelProc' method="post">
+				<br>
+				<h2 class="text-center">
+					<b>회원정보 수정</b>
+				</h2>
+				<br>
+				<p class="hint-text">회원 정보를 수정합니다 .</p>
+				<div class="form-group ">
+					<input type="text" class="form-control" 
+                        name="userName" value ='이름' required readonly='readonly'>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" name="userId" 
+                        id='userId' value ='ID'	maxlength='10' readonly='readonly'>
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control"
+					id='oriChkPwd' name="oriChkPwd" placeholder="기존패스워드." maxlength='13'>
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control" id='userPwd' name="userPwd"
+					 placeholder="영문,특수문자,숫자를 포함해 8자이상을 적어주세요." maxlength='13'>
+				</div>
+				<div class="form-group">
+					<input type="password" id='chkPwd'
+					class="form-control" name="chkPwd" placeholder ='비밀번호를 한번더 입력해주세요'maxlength='13'>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" name="userEmail" id="userEmail" placeholder="E-mail">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" name="tel" placeholder="전화번호">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" name="address1" placeholder="주소">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" name="address2"	placeholder="상세주소를 입력해주세요.">
+				</div>
+				
+				<div class="text-center">
+               <button type="button" class="btn btn-info" style="width: 50%"
+                  onclick="location.href='./01.html' ">수정</button>
+            </div>
+            <br>
+            <div class="text-center">
+               <button type="button" class="btn btn-danger" style="width: 50%"
+                  onclick="location.href='../main.html' ">탈퇴</button>
+            </div>
+			</form>
+			
+</div><br><br>
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 회원수정 끝 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+</div>
+</body>
+</html>                                      

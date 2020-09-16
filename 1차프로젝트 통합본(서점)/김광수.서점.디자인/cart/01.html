@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title></title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"><!-- 로고 -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script> 
+<script>
+function alert_deleteBook() {
+	    swal({
+	       title: "선택한 상품을 삭제하시겠습니까?",
+	       type: "success",
+	       showCancelButton: true,
+	       cancelButtonText: "아니요",
+	       confirmButtonText: "예",
+	       closeOnConfirm: false
+	    },
+	    function page_href(){
+			
+			location.href='./cartList.html';
+			})
+		};
+		
+function fchk_order() {
+	var chk_obj = document.getElementsByName("selectedBooks");
+	var chk_leng = chk_obj.length;
+	var checked = 0;
+	
+	for(i=0; i<chk_leng; i++) {
+		if(chk_obj[i].checked==true) {
+			checked+=1;
+		}
+	}
+	
+	if(checked==0) {
+		alert("1개 이상의 물품을 선택해 주시기 바랍니다.");
+		return;
+	} else {
+		document.cartListForm.action = "../order/orderWrite.html";
+	}
+}
+
+function fchk_delete() {
+	var chk_obj = document.getElementsByName("selectedBooks");
+	var chk_leng = chk_obj.length;
+	var checked = 0;
+	
+	for(i=0; i<chk_leng; i++) {
+		if(chk_obj[i].checked==true) {
+			checked+=1;
+		}
+	}
+	
+	if(checked==0) {
+		alert("1개 이상의 물품을 선택해 주시기 바랍니다.");
+		return;
+	} else {
+		document.cartListForm.action = "./cartDeleteProc.html";
+	}
+}
+		
+</script>
+<style>
+.book { margin :15px; height: 400px; width: 300px; background: #43454f;}
+</style>
+</head>
+<body>
+<div class='container'>
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 사용자 버튼 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+    <a class="navbar-brand" href="../main.html">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book-open fa-2x"></i><strong>&nbsp;&nbsp;오늘의 책</strong></a><div></div><!-- logo -->
+    <ul class='breadcrumb' style="text-align:right; height:60px; font-size:17px;">
+       <li><a href='#'>logout</a></li>
+       <li><a href='../mypage/01.html'>마이페이지</a></li>
+       <li><a href='./01.html'><strong>장바구니</strong></a></li>
+     </ul>     
+<!-- END END END END END END END END 사용자 버튼 END END END END END END END END -->
+    
+    <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 검색창 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --><br>
+    <div id='fix'>
+    <div style="text-align:center;">
+    <span class='search_box'>
+      <input type='text' class='input_text' placeholder="검색할 책을 입력하세요"/></span>
+      <button type='submit' class='search_bt'>
+   <span class='glyphicon glyphicon-search'>
+   </span></button></div></div>
+	
+	 <br><br><br>
+	<h2>장바구니</h2>
+	<form name="cartListForm" onsubmit="fchk();">
+		<table class='table table-bordered'>
+			<thead>
+			<tr>
+			<th>상품명</th>
+			<th>정가</th>
+			<th>수량</th>
+			<th>선택</th>
+			</tr>
+			</thead>
+			
+			<tbody>
+
+			<tr>
+					<td><img src = '../attach/book_<%= book.getBookIsbn() %>.jpg' style='width:100px;height:80px; '>&nbsp;&nbsp;Java의 정석</td>
+					<td>30,000 원</td>
+					<td>1권
+					</td>
+					<td><input type='checkbox' name = 'selectedBooks' value ='<%= cart.getCartNum() %>'/>
+				</tr>
+
+			</tbody>
+			
+			<tfoot>
+			<tr>
+			 <td colspan='5' style="font-size:20px;">합계금액 : 30,000원 </td>
+			</tr>
+			
+			</tfoot>
+		</table>
+			<button class="btn btn-primary col-sm-offset-3 col-sm-3"  type="button" 
+			onclick="location.href='../order/01.html'"/>선택 주문</button>
+			<button class = 'btn btn-danger col-sm-offset-1 col-sm-2' type="submit">선택 상품 제거</button>
+			</form>
+		
+	</div>
+
+</body>
+</html>

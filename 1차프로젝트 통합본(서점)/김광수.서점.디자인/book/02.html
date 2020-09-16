@@ -1,0 +1,81 @@
+<html lang="ko">
+<head>
+<title>Book Search Result 검색 결과</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/banner.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"><!-- logo -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+.book, img { align="left"; margin :15px; height: 150px; width: 120px; float:left; background: #43454f;}
+#grid {border 5px;
+solid pink;
+grid-template-columns:150px 150px 100px;
+}
+		
+</style>
+</head>
+
+<body>     
+<div class='container'>
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 사용자 버튼 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+     <a class="navbar-brand" href="../main.html">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book-open fa-2x"></i><strong>&nbsp;&nbsp;오늘의 책</strong></a><div></div><!-- logo -->
+    <ul class='breadcrumb' style="text-align:right; height:60px; font-size:17px;">
+      <li>user님, 환영합니다.</li>
+      <li><a href='./user/main.html'>logout</a></li>
+      <li><a href='./mypage/myMain.html'>마이페이지</a></li>
+      <li><a href='./cart/cartList.html'>장바구니</a></li>
+
+   </ul><!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 사용자 버튼  끝 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+        
+    <div id='fix'><!-- 반응형 웹 차단 -->
+    <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 로고 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+    <div style="position: relative; left:80px; top:40px;">
+    <a href='../main.html' class="navbar-brand">&nbsp;
+    <i class="fas fa-book-open fa-4x"></i></a></div><!-- logo -->
+    
+    <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 검색창 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --><br><br><br><br>
+    <form action='./02.html' style="text-align:center;" >
+    <span class='search_box'>
+      <input type='text' class='input_text' name='keyword' placeholder="검색할 책을 입력하세요"/></span>
+      <button type='submit' class='search_bt'>
+   <span class='glyphicon glyphicon-search'>
+   </span></button></form>
+   <!-- END END END END END END END END 검색 END END END END END END END END -->
+   
+   </div><!-- 반응형 웹 차단  --><br><br><br>
+
+<br><br><br><h2>검색 하신 "keyword"에 대한 결과입니다. </h2>
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 책 요약1 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<!-- 책 이미지 -->
+<div style="float: left;"> <!-- 책 위치 왼쪽 고정 -->
+<a href="./01.html"><div class="book" align="left">책 이미지</div></a></div>
+
+<div id='fix'>
+<div class='part' style ='border:0px margin:10px' >
+<div class= 'col-xs-4' style='margin-left:80px;'>
+<br><h3>Java의 정석</h3><br>
+<p>남궁성 저 &nbsp;&nbsp; | &nbsp;&nbsp; 민음사 &nbsp;&nbsp; | &nbsp;&nbsp; 2016년 2월 1일 <br>
+판매가 30,000원 </p>
+</div>
+</div></div><br>
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 책 요약  끝1$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --><br><br>
+<br><br><br><br><br><br><br><br><br>
+
+</div><!-- 화면 여백 끝 -->
+<!-- footer --><br><br><br><br><br><br><br><br><br>
+<footer>
+<div class='container'><br><br>
+   <dl><dd><table class="table-footer table-boardered"><tbody><tr>
+   <td> 상호명: 광수서점</td><td> 대표명: 김광수</td></tr> <tr>
+   <td colspan="2"> 사업자등록번호: 000-00-0000</td></tr><tr>
+   <td colspan="2"> (000-00) 서울시 마포구 OOOO</td></tr><tr>
+   <td>TEL: 070-0000-0000</td><td>Email: kangsoo@naver.com</td></tr><tr>
+   <td colspan="2">Copyright kangsoo. All Rights Reserved</td></tr></tbody></table></dd></dl>
+</div>
+</footer>
+</body>
+</html>
